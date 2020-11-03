@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #AA71E2;
+
+    height: 100vh;
+}
+
+#welcome {
+    font-size: 5rem;
+    font-weight: 500;
+
+    line-height: 1.16;
+
+    text-align: center;
+}
+
+#commands-info {
+    margin-top: 1.6rem;
+
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.commands {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1rem;
+}
+
+#commands-info img {
+    width: 2rem;
+
+    margin-right: 1.2rem;
+}
+
+#up {
+    transform: rotate(270deg);
+}
+
+#down {
+    transform: rotate(90deg);
+}
+
+#left {
+    transform: rotate(180deg);
+}
+
+#page-landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+#page-game {
+    background: white;
+
+    width: 80%;
+    height: 70%;
+
+    border-radius: 1.9rem;
+
+    padding: 5.2rem;
+}
+
+#page-game-centrilize {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#snake-game {
+    height: 560px; /*100%*/
+    width: 800px; /*70%*/
+}
+
+#vertical-line {
+    height: 100%;
+    width: 1px;
+
+    background: black;
+}
+
+#ranking {
+    height: 100%;
+    width: 25%;
+}
+
+#ranking header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#ranking h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.2rem;
+
+    color: #000000;
+}
+
+#ranking img {
+    width: 5rem;
+}
+
+#ranking main {
+    height: 83%;
+
+    background: #E2CBFF;
+
+    margin-top: 1.2rem;
+    padding: 1.8rem;
+
+    border-radius: 1.8rem;
+}
+
+#ranking-order {
+    height: 100%;
+    width: 100%;
+}
+
+#ranking-description, #user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ranking-description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+
+    color: #AD00FF;
+
+    margin-bottom: 2rem;
+}
+
+#ranking-name{
+    margin-left: 1.4rem;
+}
+
+#users {
+    height: 92%;
+
+    overflow: scroll;
+}
+
+.user-info {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+
+    color: #000000;
+
+    margin: 0 2rem;
+    margin-bottom: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-position, .user-name, .user-score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-position {
+    font-weight: 700;
+}
+
+.user-name {
+    font-weight: 400;
+}
+
+.user-score {
+    font-weight: 500;
+}
+
+#after-game, #before-game {
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+
+    background: rgba(210, 210, 210, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#popup {
+    width: 40%;
+    height: 40%;
+
+    background: #FFFFFF;
+    
+    border-radius: 2.5rem;
+
+    padding: 2.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#popup main, #popup-content, #popup-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+#popup main {
+    width: 100%;
+    height: 100%;
+
+    justify-content: space-between;
+}
+
+#popup-content {
+    font-size: 4rem;
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: #000000;
+}
+
+#score {
+    font-weight: 700;
+    font-size: 5.6rem;
+
+    margin: 1.2rem 0;
+}
+
+#popup-form {
+    width: 100%;
+}
+
+#popup-form input {
+    width: 90%;
+    height: 5.6rem;
+
+    background: rgba(228, 228, 228, 0.8);
+    border: 3px solid rgba(213, 213, 213, 0.34);
+
+    box-sizing: border-box;
+    border-radius: 1rem;
+
+    padding: 0 1.4rem;
+    margin-bottom: 0.4rem;
+
+    font-size: 2.2rem;
+    text-align: center;
+
+    color: #999999;
+}
+
+#popup-form span {
+    font-size: 1.15rem;
+
+    margin-bottom: 1.6rem;
+
+    color: #999999;
+}
+
+#popup-form button, #ok-button {
+    width: 40%;
+    height: 5rem;
+
+    background: rgba(169, 58, 255, 0.8);
+    
+    border: 0;
+    border-radius: 1rem;
+
+    cursor: pointer;
+
+    transition: background 200ms;
+
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#popup-form button:hover, #ok-button:hover {
+    background: #c992ff;
+}
+
+/* Animações */
+.animate-up {
+    animation-name: up;
+    animation-duration: 400ms;
+}

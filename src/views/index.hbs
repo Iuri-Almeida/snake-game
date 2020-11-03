@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+    
+        <meta charset="UTF-8">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>Snake Game</title>
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/animation.css">
+    
+    </head>
+    
+    <body>
+
+        <div id="page-landing">
+
+            <div id="page-game" class="animate-up">
+
+                <div id="page-game-centrilize">
+
+                    <canvas id="snake-game"></canvas>
+                    <div id="vertical-line"></div>
+
+                    <div id="ranking">
+
+                        <header>
+
+                            <h1>Ranking</h1>
+
+                            <img src="./images/rocket.png" alt="Rocket">
+
+                        </header>
+
+                        <main>
+
+                            <div id="ranking-order">
+                                
+                                <div id="ranking-description">
+
+                                    <span>Posição</span>
+                                    <span id="ranking-name">Nome</span>
+                                    <span>Pontuação</span>
+
+                                </div>
+
+                                <div id="users">
+
+                                    {{#each users}}
+
+                                        <div class="user-info">
+
+                                            <span class="user-position">{{this.position}}.</span>
+                                            <span class="user-name">{{this.name}}</span>
+                                            <span class="user-score">{{this.score}}</span>
+            
+                                        </div>
+
+                                    {{/each}}
+
+                                </div>
+
+                            </div>
+
+                        </main>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- JavaScript -->
+        <script src="./scripts/welcome.js"></script>
+        <script src="./scripts/ok.js"></script>
+        <script src="./scripts/snakeGame.js"></script>
+
+    </body>
+
+</html>
